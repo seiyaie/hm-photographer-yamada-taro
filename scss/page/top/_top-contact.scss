@@ -1,0 +1,76 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-awards
+------------------------------
+*/
+.top-contact {
+    background-color: var(--bg-base-light);
+}
+
+.top-form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.top-contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.top-contact-label {
+    line-height: 1;
+    letter-spacing: 0.08em;
+}
+
+.top-contact-label-required {
+    margin-left: 16px;
+    color: var(--font-attention);
+}
+
+.top-input,
+.top-textarea {
+    width: 100%;
+    padding: 8px;
+    background-color: var(--bg-white);
+    outline: 0;
+    color: var(--font-black);
+}
+.top-input {
+    height: 60px;
+    outline: 0;
+}
+
+.top-textarea {
+    min-height: 200px;
+    field-sizing: content;
+
+    @include g.mq() {
+        min-height: 250px;
+    }
+}
+
+.top-input:focus,
+.top-textarea:focus {
+    border: 2px solid var(--border-focus);
+    box-shadow: 0 0 8px 2px var(--shadow-focus);
+}
+
+.top-contact-btn {
+    background-color: var(--bg-white);
+    color: var(--bg-base);
+    font-size: 16px;
+    line-height: 1;
+    padding: 22px 93px;
+    width: 250px;
+    margin-inline: auto;
+
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-profile
+------------------------------
+*/
+
+.top-profile-content {
+    margin-top: 40px;
+    overflow: hidden;
+
+    @include g.mq() {
+        margin-top: 56px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.top-profile-pic img {
+    aspect-ratio: 324/204;
+
+    @include g.mq() {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.top-profile-text {
+    @include g.mq() {
+        background-color: var(--bg-base-light);
+        padding: 40px;
+    }
+}
+
+.top-profile-name {
+    line-height: 1;
+    letter-spacing: 0.2em;
+    margin-top: 24px;
+    margin-bottom: 16px;
+
+    @include g.mq() {
+        margin-top: 0;
+        margin-bottom: 24px;
+    }
+}
+
+.top-profile-name-jp {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.top-profile-name-en {
+    font-size: 12px;
+}
+
+.top-profile-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include g.mq() {
+        gap: 24px;
+    }
+}

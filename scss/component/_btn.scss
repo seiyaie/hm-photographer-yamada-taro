@@ -1,0 +1,48 @@
+@use "../global" as g;
+
+/*!
+component > btn
+------------------------------
+*/
+
+.c-btn {
+    position: relative;
+    display: inline-block;
+    background-color: var(--bg-base);
+    color: var(--font-base);
+    border: 1px solid var(--border-white);
+    line-height: 1;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    padding: 22px 0;
+    padding-left: 0.2em;
+    width: 100%;
+    text-align: center;
+
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    @include g.mq() {
+        font-size: 32px;
+        padding: 29px 0;
+    }
+}
+
+.c-btn::after {
+    content: "";
+    display: block;
+    width: 40px;
+    border-top: 1px solid var(--border-white);
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%);
+
+    @include g.mq() {
+        width: 70px;
+        right: -20px;
+    }
+}

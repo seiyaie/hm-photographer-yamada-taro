@@ -1,0 +1,26 @@
+/*!
+global > color
+------------------------------
+*/
+
+:root {
+    //background colors
+    --bg-base: #0f0f0f;
+    --bg-base-light: #1a1a1a;
+    --bg-black: #000000;
+    --bg-white: #ffffff;
+    --dark-faded: rgba(0, 0, 0, 0.9);
+    --light-black: rgba(0, 0, 0, 0.3);
+    //border color
+    --border-white: #ffffff;
+    --border-selected: #7a3ada;
+    //font colors
+    --font-attention: #d94747;
+    --font-base: #d0d0d0;
+    --font-black: #000000;
+    //input, textarea focus colors
+    --border-focus: #2f4f4f;
+    --shadow-focus: rgba(47, 79, 79, 0.9);
+    //icon
+    --icon-hover: #7a3ada;
+}

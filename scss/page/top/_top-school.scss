@@ -1,0 +1,62 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-school
+------------------------------
+*/
+
+.top-school-table {
+    margin: 40px 0;
+    @include g.mq() {
+        margin: 56px 0;
+    }
+}
+
+.top-school-table-row {
+    border-bottom: 1px solid var(--border-white);
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px 0;
+
+    @include g.mq() {
+        grid-template-columns: 20% 1fr;
+        gap: 85px;
+    }
+
+    &:first-child {
+        padding-top: 0;
+    }
+}
+
+.top-school-item::before {
+    content: "・";
+}
+
+.top-school-text {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.75;
+
+    @include g.mq() {
+        font-size: 24px;
+    }
+
+    span {
+        display: block;
+
+        @include g.mq() {
+            display: inline;
+        }
+    }
+}
+
+.top-school-btn {
+    margin-top: 24px;
+    margin-inline: auto;
+    width: 280px;
+
+    @include g.mq() {
+        width: 90%;
+        max-width: 685px;
+    }
+}

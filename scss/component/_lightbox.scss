@@ -1,0 +1,138 @@
+@use "../global" as g;
+
+/*!
+component > lightbox
+------------------------------
+*/
+
+.c-lightbox {
+    background-color: var(--dark-faded);
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.c-lightbox.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.c-lightbox-img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+    position: relative;
+}
+
+.c-lightbox-img {
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
+    margin: auto;
+    display: block;
+}
+
+.c-lightbox-trigger {
+    position: relative;
+    cursor: zoom-in;
+    display: inline-block;
+    transition: var(--transition);
+    @media (any-hover: hover) {
+        &:hover {
+            transform: scale(1.01);
+            opacity: 0.8;
+        }
+    }
+}
+
+.c-lightbox-zoom-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 4px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    color: white;
+}
+
+.c-lightbox-zoom-icon svg {
+    @include g.mq() {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.c-lightbox-btn {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    background-color: var(--light-black);
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    transition: var(--transition);
+    opacity: 0;
+    visibility: hidden;
+    @include g.mq() {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &--prev {
+        left: 32px;
+    }
+
+    &--next {
+        right: 32px;
+    }
+
+    &--close {
+        opacity: 1;
+        visibility: visible;
+        top: 16px;
+        right: 16px;
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.c-lightbox-icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    mask-position: center;
+    mask-size: cover;
+    background-color: var(--bg-white);
+
+    &--prev {
+        mask-image: url(../img/arrow_back.svg);
+    }
+
+    &--next {
+        mask-image: url(../img/arrow_forward.svg);
+    }
+
+    &--close {
+        mask-image: url(../img/close.svg);
+    }
+}

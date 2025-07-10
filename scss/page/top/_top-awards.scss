@@ -1,0 +1,37 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-awards
+------------------------------
+*/
+
+.top-awards {
+    background-color: var(--bg-base-light);
+}
+
+.top-awards-list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include g.mq() {
+        flex-direction: row;
+        gap: 40px;
+    }
+}
+
+.top-awards-item {
+    overflow: hidden;
+}
+
+.top-awards-item-title {
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    margin-top: 16px;
+
+    @include g.mq() {
+        font-size: 18px;
+    }
+}

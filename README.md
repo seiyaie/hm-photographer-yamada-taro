@@ -1,8 +1,10 @@
-# Webサイト　-  photographer YAMADA TARO
+# Webサイト：photographer YAMADA TARO
 
 ## 概要
 
-Hello Mentor のコーディング課題として制作した MATSUYAMA CLINIC という架空の病院の Web サイトです。Figma デザインカンプからコーディングをしました。
+Hello Mentor のコーディング課題として制作した、架空のフォトグラファー『YAMADA TARO』のポートフォリオサイトです。提供されたFigma デザインカンプからコーディングをしました。
+
+※この課題は JavaScript の解答コードが提供されておらず、設計・実装はすべて自身で行いました。
 
 ## URL
 
@@ -16,7 +18,10 @@ https://portfolio.itsseiya.com/photographer-yamada-taro/
 
 ## 工夫した点
 
--   JS の Web Animations API を使用してアニメーション実装。
--   
--   
--   
+-   JS の Web Animations API を使用してアニメーション実装
+-   JavaScript をモジュール化し、機能ごとに分割して管理 
+-   Vanilla JSによるカルーセル機能の実装
+-   Vanilla JSでlightbox機能（画像クリックで拡大表示）の実装。
+-   lightbox内でスワイプ操作により画像を切り替え（モバイル対応）
+-   lightbox内で、← / → キーによる画像切り替え、escキーでの閉じる
+  
